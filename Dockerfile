@@ -13,10 +13,9 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc && \
     . ~/.bashrc && \
+    apt-get -y install build-essential && \
     apt-get -y install unixodbc-dev && \
     apt-get -y install libgssapi-krb5-2 && \
     apt-get -y install g++ && \
     apt-get -y install libsm6 libxrender1 libfontconfig1 && \
     apt-get -y install python3-setuptools
-
-CMD [ "/bin/bash" ]
