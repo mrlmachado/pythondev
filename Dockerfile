@@ -13,6 +13,10 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc && \
     . ~/.bashrc && \
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    sudo ./aws/install --update && \
+    rm -rf awscliv2.zip && \
     apt-get -y install build-essential && \
     apt-get -y install unixodbc-dev && \
     apt-get -y install libgssapi-krb5-2 && \
