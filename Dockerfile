@@ -15,7 +15,7 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     . ~/.bashrc && \
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
-    sudo ./aws/install --update && \
+    ./aws/install --update && \
     rm -rf awscliv2.zip && \
     apt-get -y install build-essential && \
     apt-get -y install unixodbc-dev && \
