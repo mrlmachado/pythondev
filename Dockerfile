@@ -24,3 +24,5 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     apt-get -y install libsm6 libxrender1 libfontconfig1 libgl1-mesa-dev && \
     apt-get -y install python3-setuptools && \
     apt-get -y install powershell
+
+RUN pwsh -Command Install-Module dbatools -AcceptLicense -PassThru -Force -SkipPublisherCheck
