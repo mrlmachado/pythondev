@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3
+FROM continuumio/miniconda3:4.8.2
 WORKDIR /
 
 RUN apt-get update; apt-get -y install curl; apt-get -y install gnupg2
